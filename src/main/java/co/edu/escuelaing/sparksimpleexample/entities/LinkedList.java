@@ -1,29 +1,40 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package co.edu.escuelaing.sparksimpleexample.entities;
 
+/**
+ * <h1>LinkedList</h1>
+ * Implementacion de la estructura de datos LinkedList
+ * @param <T> tipo generico
+ */
 public class LinkedList<T>{
 
     Node head;
-
+    /**
+     * Construye una linked list con su head nulla
+     */
     public LinkedList(){
         this.head = null; 
     }
 
+    /**
+     * Clase interna encargada de almacenar los datos y la referencia hacia los demas nodos
+     */
     private class Node{
         T data;
         Node nextNode;
+        /**
+         * Construye un nodo con los datos y la referencia hacia otro node nula
+         * @param data
+         */
         Node(T data){
             this.data = data;
             this.nextNode = null;
         }
     }
 
-    
-
+    /**
+     * Retorna el tamano de la linkedList
+     * @return int
+     */
     public int size(){
         int count = 0;
         Node temp = head;
@@ -36,7 +47,10 @@ public class LinkedList<T>{
         }
         return count;
     }
-
+    /**
+     * Agrega los datos enviados a la linkedList mediante un nodo
+     * @param data dato que se quiere guardar en la estuctura de datos
+     */
     public void add(T data){
         Node newNode = new Node(data);
         newNode.nextNode = null;
@@ -51,7 +65,10 @@ public class LinkedList<T>{
             temp.nextNode = newNode;
         }
     }
-
+    /**
+     * Remueve uno de los datos que se encuentran en la linkedList
+     * @param index indice del dato el cual se quiere borrar
+     */
     public void remove(int index){
         Node temp = head;
         for (int i = 0; i < index-1 && temp != null; i++) {
@@ -60,6 +77,11 @@ public class LinkedList<T>{
         temp.nextNode = temp.nextNode.nextNode;
     }
 
+    /**
+     * Retorna el dato que se encuentra en el indice especificado
+     * @param index indice del ldato que se quiere retornar
+     * @return T dato generico que se retornara
+     */
     public T get(int index){
         Node temp = head;
         for (int i = 0; i < index && temp != null; i++) {

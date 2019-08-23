@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package co.edu.escuelaing.sparksimpleexample.entities;
 
 
@@ -12,13 +7,18 @@ import java.text.DecimalFormat;
 import java.util.Scanner;
 
 /**
- * Hello world!
- *
+ * <h1> Calculator </h1>
+ * Esta clase realiza el calculo de la media y la desviacion de una lista de numeros
+ *@author Daniel Rosales
  */
 public class Calc {
 
     private LinkedList<Double> linked = new LinkedList<Double>();
-
+    /**
+     * Constructor de la clase Calc el cual recibe un archivo con contiene los numeros a calcular
+     * @param file archivo con los numeros a calcular
+     * @throws FileNotFoundException
+     */
     public Calc(File file) throws FileNotFoundException {
         Scanner sc = new Scanner(file);
         while(sc.hasNext()){
@@ -28,10 +28,18 @@ public class Calc {
         sc.close();
     }
     
+    /**
+     * Constructor de la clase Calc el cual recibe una lista con los numeros a calcular
+     * @param linked LinkedList con los numeros a calcular
+     */
     public Calc(LinkedList<Double> linked ){
         this.linked=linked;
     }
 
+    /**
+     * Calcula la mediana de la lista de numeros
+     * @return double
+     */
     public double mean(){    
         double sum = 0;
         for (int i = 0; i < linked.size(); i++) sum += linked.get(i); 
@@ -39,7 +47,10 @@ public class Calc {
         DecimalFormat df = new DecimalFormat("#.##");
         return Double.valueOf(df.format(mean));
     }
-
+    /**
+     * Calcula la desviacion de la lista de numeros
+     * @return double
+     */
     public double desviation(){
         double avg = mean();
         double sum = 0;

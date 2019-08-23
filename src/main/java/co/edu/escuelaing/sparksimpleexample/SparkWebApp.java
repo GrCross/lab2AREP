@@ -7,16 +7,15 @@ import spark.Response;
 import static spark.Spark.*;
 
 /**
- * Minimal web app example for Heroku using SparkWeb
+ * Minimal web app  for Heroku using SparkWeb
  *
  * @author daniel
  */
 public class SparkWebApp {
 
     /**
-     * This main method uses SparkWeb static methods and lambda functions to
-     * create a simple Hello World web app. It maps the lambda function to the
-     * /hello relative URL.
+     * Metodo main de la aplicacion, corre la aplicacion por medio del puerto 5000 o 4567
+     * @param args argumentos de entrada de la aplicacion
      */
     public static void main(String[] args) {
         port(getPort());
@@ -24,6 +23,12 @@ public class SparkWebApp {
         get("/results", (req, res) -> resultsPage(req, res));
     }
 
+    /**
+     * Metodo que se encarga de estructurar el html de la pagina de input
+     * @param req parametros ingresados
+     * @param res respuesta de la pagina
+     * @return
+     */
     private static String inputDataPage(Request req, Response res) {
         String pageContent
                 = "<!DOCTYPE html>"
@@ -42,6 +47,12 @@ public class SparkWebApp {
         return pageContent;
     }
 
+    /**
+     * Metodo que se encarga de estructurar el html de la pagina de response
+     * @param req parametros ingresados
+     * @param res respuesta de la pagina
+     * @return
+     */
     private static String resultsPage(Request req, Response res) {
         LinkedList linked = new LinkedList<Double>();
         String[] numbers = req.queryParams("double").split("/");
