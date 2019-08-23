@@ -1,8 +1,10 @@
 #lab2AREP
 
+Esta aplicación se encarga de calcular la media y la desviación de una lista de numeros.
+
 ## instalación
 
-para poder instalar la aplicacion seguir los siguientes pasos:
+para poder instalar la aplicación seguir los siguientes pasos:
 
 * Clonar el proyecto del ropositorio
 
@@ -19,13 +21,13 @@ mvn compile
 ````
 
 ## Uso
-Para usar la aplicacion **localmente** una vez instalada es necesario ir a la raiz del proyecto y desde el cmd usar el siguiente comando:
+Para usar la aplicación **localmente** una vez instalada es necesario ir a la raiz del proyecto y desde el cmd usar el siguiente comando:
 
 ````
 mvn exec:java -Dexec.mainClass="co.edu.escuelaing.sparksimpleexample.SparkWebApp"
 ````
 
-una vez abierta la aplicacion aparecera la siguiente página:
+una vez abierta la aplicación aparecera la siguiente página:
 
 ![](images/index.png)
 
@@ -41,7 +43,7 @@ para ejecutar las pruebas ejecute el siguiente comando:
 mvn test
 ````
 
-existen 2 casos de pruebas, uno para la media y otro para la desviacion y usan los siguientes casos
+existen 2 casos de pruebas, uno para la media y otro para la desviación y usan los siguientes casos
 
 test1
 
@@ -51,29 +53,6 @@ test2
 
 ![](images/test2.png)
 
-## arquitectura y modelos de la aplicacion
+Los resultados seran los siguientes
 
-En la arquitectura de la aplicacion se pueden identificar 3 diferentes capas
-
-* Presentation layer
-* Service layer
-* Bussines layer
-
-
-![](images/architectureDiagram.png)
-
-
-
-### presentation layer
-
-Esta capa de la arquitectura se encarga de la interaccion directa con el usuario
-
-![](images/presentationLayer.png)
-
-### Service layer
-
-Esta capa se encarga de prestar todos los servicios que ofrece la aplicacion.
-
-Esta capa se comunica con la capa de presentacion por medio de **peticiones http**
-
-![](images/ServiceLayer.png)
+![](images/testResults.png)
