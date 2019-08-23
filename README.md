@@ -56,3 +56,9 @@ test2
 Los resultados seran los siguientes
 
 ![](images/testResults.png)
+
+## Despliegue
+
+La aplicacion se encuentra desplegada en el siguiente link:
+https://pure-mesa-64978.herokuapp.com/
+
