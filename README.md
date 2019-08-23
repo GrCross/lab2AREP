@@ -1,4 +1,4 @@
-#lab2AREP
+# lab2AREP
 
 Esta aplicación se encarga de calcular la media y la desviación de una lista de numeros.
 
