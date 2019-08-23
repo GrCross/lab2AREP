@@ -32,7 +32,7 @@ public class SparkWebApp {
                 + "<h2>Calc</h2>"
                 + "<form action=\"/results\">"
                 + "  Ingrese los numeros que quiere calcular separados por /:<br>"
-                + "  <input type=\"text\" name=\"double\" value=\"Mickey\">"
+                + "  <input type=\"text\" name=\"double\" value=\" \" / \"\">"
                 + "  <br><br>"
                 + "  <input type=\"submit\" value=\"Submit\">"
                 + "</form>"
