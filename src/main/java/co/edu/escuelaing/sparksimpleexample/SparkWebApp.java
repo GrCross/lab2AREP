@@ -19,7 +19,7 @@ public class SparkWebApp {
      * /hello relative URL.
      */
     public static void main(String[] args) {
-        //port(getPort());
+        port(getPort());
         get("/inputdata", (req, res) -> inputDataPage(req, res));
         get("/results", (req, res) -> resultsPage(req, res));
     }
